@@ -3,7 +3,8 @@ We are team 3:
 
 Hello Team. This is Ruthanne
 Hello Team, This is Alex
-Hello Team, This is Cedric 
+Hello Team, This is Cedric
+Hello Team, This is Owen
 
 We are going to calculate someone buying a car online Like car Guru (However, very simplified).
 We will be using JavaFX.
