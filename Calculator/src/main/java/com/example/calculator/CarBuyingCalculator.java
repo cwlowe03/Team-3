@@ -27,6 +27,17 @@ public class CarBuyingCalculator extends Application
     @Override
     public void start(Stage primaryStage)
     {
+//Customer name and number code
+            System.out.println("--------Enter Customer Details-------- ");
+        Scanner Customer = new Scanner(System.in);
+        System.out.print("Enter customer name: ");
+        String name = Customer.next();
+        System.out.println("Name: " + name);
+        System.out.print("Enter customer number: ");
+        int i = Customer.nextInt();
+        System.out.println("Age: " + i);
+        Customer.close();
+    
         //Dorm ComboBox
         ComboBox<String> carComboBox = new ComboBox<>();
         carComboBox.getItems().addAll
