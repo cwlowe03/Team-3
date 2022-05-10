@@ -36,7 +36,7 @@ public class CarBuyingCalculator extends Application
         System.out.println("Name: " + name);
         System.out.print("Enter customer number: ");
         int i = Customer.nextInt();
-        System.out.println("Age: " + i);
+        System.out.println("Customer Number: " + i);
         Customer.close();
     
         //Dorm ComboBox
