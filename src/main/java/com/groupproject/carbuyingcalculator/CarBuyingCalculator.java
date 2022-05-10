@@ -1,20 +1,16 @@
-package com.example.assignment4_cis232;
+package com.groupproject.carbuyingcalculator;
 
 import javafx.application.Application;
-import javafx.scene.control.ComboBox;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.geometry.Pos;
 import javafx.geometry.Insets;
-import java.text.DecimalFormat;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import java.io.IOException;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
 import java.util.Scanner;
 
 public class CarBuyingCalculator extends Application
@@ -29,7 +25,7 @@ public class CarBuyingCalculator extends Application
     public void start(Stage primaryStage)
     {
 //Customer name and number code
-            System.out.println("--------Enter Customer Details-------- ");
+        System.out.println("--------Enter Customer Details-------- ");
         Scanner Customer = new Scanner(System.in);
         System.out.print("Enter customer name: ");
         String name = Customer.next();
@@ -38,7 +34,7 @@ public class CarBuyingCalculator extends Application
         int i = Customer.nextInt();
         System.out.println("Customer Number: " + i);
         Customer.close();
-    
+
         //Dorm ComboBox
         ComboBox<String> carComboBox = new ComboBox<>();
         carComboBox.getItems().addAll
