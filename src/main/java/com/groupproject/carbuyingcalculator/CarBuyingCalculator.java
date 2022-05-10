@@ -35,7 +35,7 @@ public class CarBuyingCalculator extends Application
         System.out.println("Customer Number: " + i);
         Customer.close();
 
-        //Dorm ComboBox
+        //Car ComboBox
         ComboBox<String> carComboBox = new ComboBox<>();
         carComboBox.getItems().addAll
                 (   "Ford Mustang",
@@ -67,8 +67,18 @@ public class CarBuyingCalculator extends Application
         //Total Cost Label & Output
         Label costDescriptor = new Label("Total Cost: ");
         Label costOutputLabel = new Label("$0.00");
+
+        //Monthly Payment Label & Output
+        Label costDescriptor1 = new Label("Monthly Payment for 10 Years: ");
+        Label costOutputLabel1 = new Label("$0.00");
+
         //Create HBOX to Display the Cost Descriptor & Total Cost Output Side by Side
         HBox costHBox = new HBox(10, costDescriptor,costOutputLabel);
+        //Center Position the Cost Descriptor & Total Cost Output
+        costHBox.setAlignment(Pos.CENTER);
+
+        //Create HBOX to Display the Cost Descriptor1 & Monthly Payment Output Side by Side
+        HBox cost1HBox = new HBox(10, costDescriptor1,costOutputLabel1);
         //Center Position the Cost Descriptor & Total Cost Output
         costHBox.setAlignment(Pos.CENTER);
 
@@ -82,6 +92,7 @@ public class CarBuyingCalculator extends Application
                             double carCharge = 0.0;
                             double optionCharge = 0.0;
                             double totalCharge = 0.0;
+                            double monthlyPayment = 0.0;
 
                             if (carComboBox.getValue() !=null)
                             {
@@ -112,14 +123,16 @@ public class CarBuyingCalculator extends Application
 
                             //Total Charge calculation
                             totalCharge = carCharge + optionCharge;
+                            monthlyPayment = (totalCharge/10)/12;
 
                             //Display Charges
                             costOutputLabel.setText(String.format("$%,.2f", totalCharge));
+                            costOutputLabel1.setText(String.format("$%,.2f", monthlyPayment));
                         }
                 );
 
         // Display in a VBox
-        VBox mainVBox = new VBox(10, optionHBox, costHBox, calcButton);
+        VBox mainVBox = new VBox(10, optionHBox, costHBox, cost1HBox, calcButton);
         mainVBox.setAlignment(Pos.CENTER);
         mainVBox.setPadding(new Insets(10));
 
